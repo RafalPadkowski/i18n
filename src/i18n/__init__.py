@@ -2,6 +2,8 @@ import gettext
 from dataclasses import dataclass
 from pathlib import Path
 
+from loguru import logger
+
 
 @dataclass
 class Translation:
@@ -35,9 +37,9 @@ class Translation:
                     languages=[self._language],
                 )
             except AssertionError:
-                print("localedir is not initialized")
+                logger.error("localedir is not initialized")
             except OSError:
-                print("no .mo file is found")
+                logger.error(".mo file is not found")
 
     def __call__(self, message: str) -> str:
         """
