@@ -7,7 +7,9 @@ authors = [
     { name = "Rafal Padkowski", email = "rafaelp@poczta.onet.pl" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "loguru>=0.7.3",
+]
 
 [build-system]
 requires = ["uv_build>=0.8.22,<0.9.0"]
