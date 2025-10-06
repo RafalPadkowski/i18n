@@ -1,0 +1,24 @@
+# byte-compiled
+__pycache__/
+
+# distribution / packaging
+dist/
+
+# flask stuff
+instance/
+
+# pyenv
+.python-version
+
+# virtual environments
+.venv/
+
+# local databases
+*.sqlite
+
+# environment variables
+.env
+
+# editors
+.editorconfig
+
