@@ -45,7 +45,7 @@ class Translation:
         """
         Return the localized translation of message based on the current language.
         """
-        if self._language == self.default_language:
+        if not message or self._language == self.default_language:
             return message
 
         return self._gnutranslations.gettext(message)
